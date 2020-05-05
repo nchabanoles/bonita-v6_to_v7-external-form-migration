@@ -13,13 +13,12 @@ public class FormController {
 
         @GetMapping("/validateRequestForm")
         public String sendForm(Request request) {
-
             return "requestValidationForm";
         }
 
         @PostMapping("/executeTask")
         public RedirectView processForm(Request request) {
-            String executeTaskOnBonitaURL = MessageFormat.format("{0}&valid={1}",request.getSubmitURL(), request.isValid());
+            String executeTaskOnBonitaURL = MessageFormat.format("{0}&valid={1}&description={2}",request.getSubmitURL(), request.isValid(), request.getDescription());
             return new RedirectView(executeTaskOnBonitaURL);
         }
 }

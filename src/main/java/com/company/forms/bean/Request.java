@@ -2,18 +2,18 @@ package com.company.forms.bean;
 
 public class Request {
 
-    private long id;
+    private String id;
     private String description;
     private boolean valid;
 
     // Used to forward data to Bonita after the form is submitted
     private String submitURL;
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
