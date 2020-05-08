@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'maven'
+}
+
+group 'com.bonitasoft.v6form.migration.experimental'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+    compileOnly group: 'org.bonitasoft.engine', 'name': 'bonita-client', 'version': '7.7.0'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
