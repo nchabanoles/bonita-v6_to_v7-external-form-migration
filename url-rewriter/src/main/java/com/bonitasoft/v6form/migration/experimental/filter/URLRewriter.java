@@ -43,9 +43,12 @@ public class URLRewriter extends HttpServlet {
 
     private String getSubmitURL(HttpServletRequest req) {
         long id = getTaskId(req);
-        return req.getRequestURL().toString() + "Submitter/?id=" + id;
+        String currentServlet = req.getRequestURL().toString();
+        if(req.getPathInfo()!=null) {
+            currentServlet = currentServlet.substring(0,currentServlet.length() - req.getPathInfo().length());
+        }
+        return currentServlet + "Submitter/?id=" + id;
     }
-
     private long getTaskId(HttpServletRequest req) {
         return Long.parseLong(req.getParameter("id").trim());
     }
