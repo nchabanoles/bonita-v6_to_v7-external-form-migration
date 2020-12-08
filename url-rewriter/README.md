@@ -3,16 +3,13 @@ See provided web.xml
 
 2. Update process definition to take, as contract, the fields that were sent back by external forms  
 Example:  
-
 V6 Page flow configuration:  
 - validAsText (data) Takes value of field_valid  
 - requestDescription Takes value of field_description  
-
 becomes:  
-Execution > Contract >  
+ Execution > Contract >  
 - validInput TEXT  
 - descriptionInput TEXT  
-
 Execution > Operations >  
 - valid Takes value of validInput  
 - requestDescription Takes value of descriptionInput   
