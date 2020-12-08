@@ -5,17 +5,19 @@ See provided web.xml
 Example:  
 
 V6 Page flow configuration:  
-    validAsText (data) Takes value of field_valid  
-    requestDescription Takes value of field_description  
+- validAsText (data) Takes value of field_valid  
+- requestDescription Takes value of field_description  
+
 becomes:  
 Execution > Contract >  
-    validInput TEXT  
-    descriptionInput TEXT  
-Execution > Operations >  
-    valid Takes value of validInput  
-    requestDescription Takes value of descriptionInput   
+- validInput TEXT  
+- descriptionInput TEXT  
 
-2. Update process definition to define the URLs to redirect to  
+Execution > Operations >  
+- valid Takes value of validInput  
+- requestDescription Takes value of descriptionInput   
+
+3. Update process definition to define the URLs to redirect to  
 On each task/processwith external form:  
 - Execution > Form >  
     External URL: /bonita/forms/v6/proxy  
