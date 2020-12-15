@@ -1,3 +1,5 @@
+# How to use the URL-rewriter servlets to migrate a process with "external URL" forms setting
+
 1. Install Proxy Servlets  
 See provided web.xml
 
